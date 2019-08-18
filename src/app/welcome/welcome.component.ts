@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-
-  constructor() { }
+name;
+  constructor(private route:ActivatedRoute) {
+this.route.params
+.subscribe(params=>{
+  this.name=params.name;
+})
+   }
 
   ngOnInit() {
   }

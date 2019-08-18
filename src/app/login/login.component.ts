@@ -14,11 +14,10 @@ export class LoginComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit() {
-    this.router.navigate(['welcome']);
   }
 
   handleLogin(){
-
+    this.router.navigate(['/welcome',this.username]);
   }
 
 }
