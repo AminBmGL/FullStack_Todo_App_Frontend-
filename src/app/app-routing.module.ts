@@ -5,12 +5,14 @@ import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { ListTodosComponent } from './list-todos/list-todos.component';
 import { LoginGuardService } from './services/login-guard.service';
+import { TodoFormComponent } from './todo-form/todo-form.component';
 
 const routes: Routes = [
   {path:'',redirectTo: 'login', pathMatch: 'full' },
   {path:'login',component:LoginComponent},
   {path:"welcome/:name",component:WelcomeComponent,canActivate:[LoginGuardService]},
   {path:'todos',component:ListTodosComponent,canActivate:[LoginGuardService]},
+  {path:'todos/id',component:TodoFormComponent,canActivate:[LoginGuardService]},
   {path:"**",component:ErrorComponent}
 ];
 

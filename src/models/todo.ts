@@ -1,7 +1,7 @@
 export class Todo {
-    constructor(private id :number ,
-        private description:string,
-        private done:boolean,
-        private targetDate:Date,
+    constructor(public id :number ,
+        public description:string,
+        public done:boolean,
+        public targetDate:Date,
         ){ }
 }
